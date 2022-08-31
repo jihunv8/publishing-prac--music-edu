@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import _ReadMoreButton from '../ReadMoreButton.styled.js';
 
 function Contents() {
   return (
@@ -41,20 +42,6 @@ const ImageSource = styled.div`
   line-height: 160%;
 `;
 
-const ReadMoreButton = styled.button`
-  width: 239px;
-  height: 49px;
+const ReadMoreButton = styled(_ReadMoreButton)`
   margin-top: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  letter-spacing: 0.1875rem;
-  font-weight: bold;
-  background-color: rgba(0, 0, 0, 0);
-  border: 2px solid #1847b8;
-
-  &:hover {
-    background-color: #1847b8;
-    color: #fff;
-  }
 `;
