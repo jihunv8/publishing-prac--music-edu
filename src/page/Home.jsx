@@ -6,6 +6,7 @@ import Section2 from '../components/home/Section2';
 import Section3 from '../components/home/Section3';
 import Section4 from '../components/home/section4/Section4';
 import Section5 from '../components/home/section5/Section5';
+import Section6 from '../components/home/section6/Section6';
 
 const HomeWrapper = styled.div``;
 
@@ -18,6 +19,7 @@ function Home() {
       <Section3 />
       <Section4 />
       <Section5 />
+      <Section6 />
     </HomeWrapper>
   );
 }
