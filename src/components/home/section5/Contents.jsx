@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import _ReadMoreButton from '../ReadMoreButton.styled.js';
+import _ReadMoreButton from '../common-styled/ReadMoreButton.styled.js';
 
 function Contents() {
   return (
