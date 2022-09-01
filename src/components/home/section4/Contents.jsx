@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import * as mediaSize from '../../../global-style/style-util/mediaSize';
 
 function Contents() {
   return (
@@ -23,6 +24,30 @@ const ContentsWrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   color: #fff;
+
+  @media screen and (max-width: ${mediaSize.screenLarge}) {
+    width: 763px;
+    margin-right: 0;
+    padding-left: 340px;
+  }
+
+  @media screen and (max-width: ${mediaSize.screenMiddle}) {
+    width: 577px;
+    height: 426px;
+    padding: 40px 40px 130px 60px;
+    justify-content: flex-start;
+  }
+
+  @media screen and (max-width: ${mediaSize.screenSmall}) {
+    width: 466px;
+    height: 446px;
+    padding: 30px 30px 100px 30px;
+  }
+
+  @media screen and (max-width: ${mediaSize.screenXSmall}) {
+    width: 309px;
+    height: 446px;
+  }
 `;
 
 const Title = styled.h2`
@@ -30,6 +55,14 @@ const Title = styled.h2`
   font-family: roboto-condensed, sans-serif;
   font-weight: normal;
   line-height: 110%;
+
+  @media screen and (max-width: ${mediaSize.screenSmall}) {
+    font-size: 3rem;
+  }
+
+  @media screen and (max-width: ${mediaSize.screenXSmall}) {
+    font-size: 2.25rem;
+  }
 `;
 
 const Text = styled.div`
