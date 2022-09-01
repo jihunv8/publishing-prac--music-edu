@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 import Header from '../components/common/Header';
+import Footer from '../components/common/Footer';
 import Section1 from '../components/home/section1/Section1';
 import Section2 from '../components/home/section2/Section2';
 import Section3 from '../components/home/section3/Section3';
@@ -26,6 +27,7 @@ function Home() {
       <Section7 />
       <Section8 />
       <Section9 />
+      <Footer />
     </HomeWrapper>
   );
 }
