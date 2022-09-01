@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { screenLarge, screenMiddle, screenSmall, screenXSmall } from '../../../global-style/style-util/mediaSize';
+import * as mediaSize from '../../../global-style/style-util/mediaSize';
 
 import _ReadMoreButton from '../common-styled/ReadMoreButton.styled';
 
@@ -26,7 +26,7 @@ const ContentsWrapper = styled.div`
   flex-grow: 53;
   flex-basis: 0;
 
-  @media screen and (max-width: ${screenMiddle}) {
+  @media screen and (max-width: ${mediaSize.screenMiddle}) {
     flex-grow: 45;
   }
 `;
@@ -38,17 +38,17 @@ const ContentsContainer = styled.div`
   flex-direction: column;
   justify-content: center;
 
-  @media screen and (max-width: ${screenLarge}) {
+  @media screen and (max-width: ${mediaSize.screenLarge}) {
     padding-left: 15px;
     padding-right: 30px;
   }
 
-  @media screen and (max-width: ${screenMiddle}) {
+  @media screen and (max-width: ${mediaSize.screenMiddle}) {
     padding-top: 50px;
     padding-bottom: 50px;
   }
 
-  @media screen and (max-width: ${screenSmall}) {
+  @media screen and (max-width: ${mediaSize.screenSmall}) {
     padding-left: 10px;
     padding-right: 10px;
     padding-bottom: 30px;
@@ -76,19 +76,19 @@ const Title = styled.h2`
   line-height: 110%;
   margin-top: 20px;
 
-  @media screen and (max-width: ${screenLarge}) {
+  @media screen and (max-width: ${mediaSize.screenLarge}) {
     font-size: 3.625rem;
   }
 
-  @media screen and (max-width: ${screenMiddle}) {
+  @media screen and (max-width: ${mediaSize.screenMiddle}) {
     font-size: 2.75rem;
   }
 
-  @media screen and (max-width: ${screenSmall}) {
+  @media screen and (max-width: ${mediaSize.screenSmall}) {
     font-size: 4.25rem;
   }
 
-  @media screen and (max-width: ${screenXSmall}) {
+  @media screen and (max-width: ${mediaSize.screenXSmall}) {
     font-size: 3.4375rem;
   }
 `;

@@ -1,15 +1,5 @@
 import styled from 'styled-components';
-import {
-  contentsAreaXLarge,
-  contentsAreaLarge,
-  contentsAreaMiddle,
-  contentsAreaSmall,
-  contentsAreaXSmall,
-  screenLarge,
-  screenMiddle,
-  screenSmall,
-  screenXSmall,
-} from '../../../global-style/style-util/mediaSize';
+import * as mediaSize from '../../../global-style/style-util/mediaSize';
 
 import Contents from './Contents';
 
@@ -34,29 +24,29 @@ const Section1Wrapper = styled.section`
 `;
 
 const ContentsArea = styled.div`
-  width: ${contentsAreaXLarge};
+  width: ${mediaSize.contentsAreaXLarge};
   height: 691px;
   margin: 0 auto;
   display: flex;
 
-  @media screen and (max-width: ${screenLarge}) {
-    width: ${contentsAreaLarge};
+  @media screen and (max-width: ${mediaSize.screenLarge}) {
+    width: ${mediaSize.contentsAreaLarge};
     height: 570px;
   }
 
-  @media screen and (max-width: ${screenMiddle}) {
-    width: ${contentsAreaMiddle};
+  @media screen and (max-width: ${mediaSize.screenMiddle}) {
+    width: ${mediaSize.contentsAreaMiddle};
     height: 535px;
   }
 
-  @media screen and (max-width: ${screenSmall}) {
-    width: ${contentsAreaSmall};
+  @media screen and (max-width: ${mediaSize.screenSmall}) {
+    width: ${mediaSize.contentsAreaSmall};
     height: 1194px;
     flex-direction: column;
   }
 
-  @media screen and (max-width: ${screenXSmall}) {
-    width: ${contentsAreaXSmall};
+  @media screen and (max-width: ${mediaSize.screenXSmall}) {
+    width: ${mediaSize.contentsAreaXSmall};
     height: 1078px;
   }
 `;
@@ -65,11 +55,11 @@ const ImageContainer = styled.div`
   flex-grow: 47;
   flex-basis: 0;
 
-  @media screen and (max-width: ${screenMiddle}) {
+  @media screen and (max-width: ${mediaSize.screenMiddle}) {
     flex-grow: 55;
   }
 
-  @media screen and (max-width: ${screenSmall}) {
+  @media screen and (max-width: ${mediaSize.screenSmall}) {
     order: 1;
   }
 `;
@@ -79,11 +69,11 @@ const Image = styled.div`
   flex-grow: 47;
   flex-basis: 0;
 
-  @media screen and (max-width: ${screenMiddle}) {
+  @media screen and (max-width: ${mediaSize.screenMiddle}) {
     flex-grow: 55;
   }
 
-  @media screen and (max-width: ${screenSmall}) {
+  @media screen and (max-width: ${mediaSize.screenSmall}) {
     order: 1;
   }
 `;
