@@ -6,7 +6,7 @@ import musicTherapyIcon from '../../../images/icons/music-therapy.png';
 import ourMissionIcon from '../../../images/icons/our-mission.png';
 import musicCampsIcon from '../../../images/icons/music-camps.png';
 import libraryIcon from '../../../images/icons/library.png';
-import { contentsAreaXLarge } from '../../../global-style/style-util/mediaSize';
+import * as mediaSize from '../../../global-style/style-util/mediaSize';
 
 const mockText =
   '​Justo nec ultrices dui sapien eget mi. Velit egestas dui id ornare arcu odio ut sem nulla. Fermentum posuere urna nec tincidunt praesent semper feugiat nibh sed.';
@@ -31,7 +31,25 @@ const Section2Wrapper = styled.section`
 `;
 
 const ContentsArea = styled.div`
-  width: ${contentsAreaXLarge};
+  width: ${mediaSize.contentsAreaXLarge};
   margin: 0 auto;
+  padding: 60px 0;
   display: flex;
+
+  @media screen and (max-width: ${mediaSize.screenLarge}) {
+    width: ${mediaSize.contentsAreaLarge};
+  }
+
+  @media screen and (max-width: ${mediaSize.screenMiddle}) {
+    width: ${mediaSize.contentsAreaMiddle};
+  }
+
+  @media screen and (max-width: ${mediaSize.screenSmall}) {
+    width: ${mediaSize.contentsAreaSmall};
+    flex-direction: column;
+  }
+
+  @media screen and (max-width: ${mediaSize.screenXSmall}) {
+    width: ${mediaSize.contentsAreaXSmall};
+  }
 `;

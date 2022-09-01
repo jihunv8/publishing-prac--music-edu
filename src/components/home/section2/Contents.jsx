@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import * as mediaSize from '../../../global-style/style-util/mediaSize';
 
 function Contents({ isDown = false, icon = '', iconAlt = '', title = '', text = '' }) {
   return (
@@ -16,10 +17,25 @@ export default Contents;
 
 const ContentsWrapper = styled.div`
   height: 571px;
-  margin: 60px 0;
   padding: ${({ isDown }) => (isDown ? '160px 20px 26px' : '30px 20px')};
-  flex-grow: 25;
+  flex-grow: 1;
   flex-basis: 0;
+
+  @media screen and (max-width: ${mediaSize.screenLarge}) {
+    height: 501px;
+    ${({ isDown }) => isDown && 'padding-top: 140px'}
+  }
+
+  @media screen and (max-width: ${mediaSize.screenMiddle}) {
+    height: 494px;
+    padding: 30px 20px;
+  }
+
+  @media screen and (max-width: ${mediaSize.screenSmall}) {
+    height: fit-content;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
 `;
 
 const ContentsIcon = styled.div`
