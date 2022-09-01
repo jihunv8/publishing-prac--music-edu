@@ -36,7 +36,6 @@ const ContentsArea = styled.div`
 
   @media screen and (max-width: ${mediaSize.screenSmall}) {
     width: ${mediaSize.contentsAreaSmall};
-    flex-direction: column;
   }
 
   @media screen and (max-width: ${mediaSize.screenXSmall}) {
