@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const ReadMoreButton = styled.button`
-  width: 238px;
+  width: 240px;
   height: 50px;
   display: flex;
   justify-content: center;

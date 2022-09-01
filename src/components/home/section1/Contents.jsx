@@ -1,18 +1,21 @@
 import styled from 'styled-components';
+import { screenLarge, screenMiddle, screenSmall, screenXSmall } from '../../../global-style/style-util/mediaSize';
 
 import _ReadMoreButton from '../common-styled/ReadMoreButton.styled';
 
 function Contents() {
   return (
     <ContentsWrapper>
-      <SubTitle>MODERN&#38; FUN</SubTitle>
-      <Title>ONLINE MUSIC EDUCATION</Title>
-      <Text>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-        magna aliqua.
-      </Text>
-      <ImageSource>Image by Freepik</ImageSource>
-      <ReadMoreButton>READ MORE</ReadMoreButton>
+      <ContentsContainer>
+        <SubTitle>MODERN&#38; FUN</SubTitle>
+        <Title>ONLINE MUSIC EDUCATION</Title>
+        <Text>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua.
+        </Text>
+        <ImageSource>Image by Freepik</ImageSource>
+        <ReadMoreButton>READ MORE</ReadMoreButton>
+      </ContentsContainer>
     </ContentsWrapper>
   );
 }
@@ -20,25 +23,49 @@ function Contents() {
 export default Contents;
 
 const ContentsWrapper = styled.div`
+  flex-grow: 53;
+  flex-basis: 0;
+
+  @media screen and (max-width: ${screenMiddle}) {
+    flex-grow: 45;
+  }
+`;
+
+const ContentsContainer = styled.div`
+  height: 100%;
   padding: 30px 50px 30px 25px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  flex-grow: 53;
-  flex-basis: 0;
+
+  @media screen and (max-width: ${screenLarge}) {
+    padding-left: 15px;
+    padding-right: 30px;
+  }
+
+  @media screen and (max-width: ${screenMiddle}) {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  @media screen and (max-width: ${screenSmall}) {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 30px;
+  }
 `;
 
 const SubTitle = styled.div`
   width: 238px;
   height: 54px;
   background-color: #1847b8;
-  color: #fff;
-  letter-spacing: 0.3125rem;
   display: flex;
   justify-content: center;
   align-items: center;
+  color: #fff;
   font-size: 1.25rem;
   font-weight: bold;
+  letter-spacing: 0.3125rem;
 `;
 
 const Title = styled.h2`
@@ -47,11 +74,27 @@ const Title = styled.h2`
   font-weight: bold;
   font-family: roboto-condensed, sans-serif;
   line-height: 110%;
-  margin-top: 18px;
+  margin-top: 20px;
+
+  @media screen and (max-width: ${screenLarge}) {
+    font-size: 3.625rem;
+  }
+
+  @media screen and (max-width: ${screenMiddle}) {
+    font-size: 2.75rem;
+  }
+
+  @media screen and (max-width: ${screenSmall}) {
+    font-size: 4.25rem;
+  }
+
+  @media screen and (max-width: ${screenXSmall}) {
+    font-size: 3.4375rem;
+  }
 `;
 
 const Text = styled.p`
-  margin-top: 23px;
+  margin-top: 20px;
   line-height: 160%;
   font-size: 1.125rem;
 `;
