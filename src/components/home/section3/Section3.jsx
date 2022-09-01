@@ -1,28 +1,15 @@
 import styled from 'styled-components';
-import { contentsAreaXLarge } from '../../../global-style/style-util/mediaSize';
+import * as mediaSize from '../../../global-style/style-util/mediaSize';
 
-import Contents from './Contents';
-
-const mockText =
-  '​Justo nec ultrices dui sapien eget mi. Velit egestas dui id ornare arcu odio ut sem nulla. Fermentum posuere urna nec tincidunt praesent semper feugiat nibh sed.';
+import Header from './Header';
+import ContentsList from './ContentsList';
 
 function Section3() {
   return (
     <Section3Wrapper>
       <ContentsArea>
-        <Header>
-          <Title>Music Education</Title>
-          <Description>
-            The beauty of running is that it can be done in a variety of places, by people of all abilities, at
-            distances both short and long.
-          </Description>
-        </Header>
-        <EducationContentsList>
-          <Contents title="Students" text={mockText} />
-          <Contents title="Programs" text={mockText} />
-          <Contents title="Music" text={mockText} />
-          <Contents title="Psychology" text={mockText} />
-        </EducationContentsList>
+        <Header />
+        <ContentsList />
       </ContentsArea>
     </Section3Wrapper>
   );
@@ -35,33 +22,24 @@ const Section3Wrapper = styled.section`
 `;
 
 const ContentsArea = styled.div`
-  width: ${contentsAreaXLarge};
+  width: ${mediaSize.contentsAreaXLarge};
   margin: 0 auto;
   padding: 60px 0;
-`;
 
-const Header = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-`;
+  @media screen and (max-width: ${mediaSize.screenLarge}) {
+    width: ${mediaSize.contentsAreaLarge};
+  }
 
-const Title = styled.h2`
-  color: #1847b8;
-  font-size: 3.75rem;
-  font-family: oswald, sans-serif;
-  font-weight: normal;
-  line-height: 110%;
-`;
+  @media screen and (max-width: ${mediaSize.screenMiddle}) {
+    width: ${mediaSize.contentsAreaMiddle};
+  }
 
-const Description = styled.div`
-  width: 720px;
-  margin-top: 20px;
-  line-height: 160%;
-  text-align: center;
-`;
+  @media screen and (max-width: ${mediaSize.screenSmall}) {
+    width: ${mediaSize.contentsAreaSmall};
+    flex-direction: column;
+  }
 
-const EducationContentsList = styled.div`
-  margin-top: 40px;
-  display: flex;
+  @media screen and (max-width: ${mediaSize.screenXSmall}) {
+    width: ${mediaSize.contentsAreaXSmall};
+  }
 `;
