@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import * as mediaSize from '../../../global-style/style-util/mediaSize';
 import { ContentsWrapper } from './ContentsWrapper.styled';
 
 function LeftContents() {
@@ -15,14 +16,27 @@ export default LeftContents;
 
 const LeftContentsWrapper = styled(ContentsWrapper)`
   padding-right: 15px;
+
+  @media screen and (max-width: ${mediaSize.screenSmall}) {
+    padding-right: 0;
+    padding-bottom: 15px;
+  }
 `;
 
 const ContentsContaniner = styled.div`
   background-color: #1847b8;
-  height: 747px;
+  height: 100%;
   padding: 30px;
   display: flex;
   align-items: center;
+
+  @media screen and (max-width: ${mediaSize.screenSmall}) {
+    height: 255px;
+  }
+
+  @media screen and (max-width: ${mediaSize.screenXSmall}) {
+    height: 231px;
+  }
 `;
 
 const Title = styled.h2`
@@ -30,4 +44,12 @@ const Title = styled.h2`
   font-size: 3.75rem;
   font-family: oswald, sans-serif;
   line-height: 120%;
+
+  @media screen and (max-width: ${mediaSize.screenMiddle}) {
+    font-size: 3rem;
+  }
+
+  @media screen and (max-width: ${mediaSize.screenXSmall}) {
+    font-size: 2.25rem;
+  }
 `;

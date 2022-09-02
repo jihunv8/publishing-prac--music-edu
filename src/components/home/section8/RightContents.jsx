@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { ContentsWrapper } from './ContentsWrapper.styled';
+import * as mediaSize from '../../../global-style/style-util/mediaSize';
 
 import image from '../../../images/44720b5f-d674-4089-b6ec-12c44ea13947.jpg';
 
@@ -24,18 +25,44 @@ export default RightContents;
 
 const RightContentsWrapper = styled(ContentsWrapper)`
   padding-left: 15px;
+
+  @media screen and (max-width: ${mediaSize.screenSmall}) {
+    padding-left: 0;
+    padding-top: 15px;
+  }
 `;
 
 const ContentsContainer = styled.div`
-  height: 747px;
   padding-left: 142px;
   padding-bottom: 30px;
+
+  @media screen and (max-width: ${mediaSize.screenLarge}) {
+    padding-left: 100px;
+  }
+
+  @media screen and (max-width: ${mediaSize.screenMiddle}) {
+    padding-left: 30px;
+  }
+
+  @media screen and (max-width: ${mediaSize.screenSmall}) {
+    padding-right: 30px;
+  }
 `;
 
 const Image = styled.div`
   background: url(${image}) no-repeat center / cover;
   width: 328px;
   height: 402px;
+
+  @media screen and (max-width: ${mediaSize.screenLarge}) {
+    width: 313px;
+    height: 384px;
+  }
+
+  @media screen and (max-width: ${mediaSize.screenXSmall}) {
+    width: 270px;
+    height: 362px;
+  }
 `;
 
 const Title = styled.h3`
