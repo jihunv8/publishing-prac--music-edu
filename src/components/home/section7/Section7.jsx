@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { contentsAreaXLarge } from '../../../global-style/style-util/mediaSize';
+import * as mediaSize from '../../../global-style/style-util/mediaSize';
 
 import Contents from './Contents';
 
@@ -23,10 +23,26 @@ export default Section7;
 const Section7Wrapper = styled.section``;
 
 const ContentsArea = styled.div`
-  width: ${contentsAreaXLarge};
+  width: ${mediaSize.contentsAreaXLarge};
   margin: 0 auto;
   padding-bottom: 70px;
   position: relative;
+
+  @media screen and (max-width: ${mediaSize.screenLarge}) {
+    width: ${mediaSize.contentsAreaLarge};
+  }
+
+  @media screen and (max-width: ${mediaSize.screenMiddle}) {
+    width: ${mediaSize.contentsAreaMiddle};
+  }
+
+  @media screen and (max-width: ${mediaSize.screenSmall}) {
+    width: ${mediaSize.contentsAreaSmall};
+  }
+
+  @media screen and (max-width: ${mediaSize.screenXSmall}) {
+    width: ${mediaSize.contentsAreaXSmall};
+  }
 `;
 
 const Shape1 = styled.div`
@@ -35,6 +51,24 @@ const Shape1 = styled.div`
   height: 70px;
   margin-left: auto;
   margin-right: 122px;
+
+  @media screen and (max-width: ${mediaSize.screenLarge}) {
+    width: 586px;
+  }
+
+  @media screen and (max-width: ${mediaSize.screenMiddle}) {
+    margin-right: 32px;
+  }
+
+  @media screen and (max-width: ${mediaSize.screenSmall}) {
+    width: 423px;
+    margin-right: 47px;
+  }
+
+  @media screen and (max-width: ${mediaSize.screenXSmall}) {
+    width: 100%;
+    margin-right: 0;
+  }
 `;
 
 const Image = styled.div`
@@ -43,6 +77,25 @@ const Image = styled.div`
   height: 570px;
   margin-left: auto;
   margin-right: 0;
+
+  @media screen and (max-width: ${mediaSize.screenLarge}) {
+    width: 840px;
+    height: 531px;
+  }
+
+  @media screen and (max-width: ${mediaSize.screenMiddle}) {
+    width: 688px;
+    height: 431px;
+  }
+
+  @media screen and (max-width: ${mediaSize.screenSmall}) {
+    width: 100%;
+    height: 338px;
+  }
+
+  @media screen and (max-width: ${mediaSize.screenXSmall}) {
+    height: 213px;
+  }
 `;
 
 const Shape2 = styled.div`
@@ -50,4 +103,27 @@ const Shape2 = styled.div`
   width: 570px;
   height: 476px;
   margin: 0 auto;
+
+  @media screen and (max-width: ${mediaSize.screenLarge}) {
+    height: 514px;
+  }
+
+  @media screen and (max-width: ${mediaSize.screenMiddle}) {
+    width: 543px;
+    height: 525px;
+    margin-left: 75px;
+  }
+
+  @media screen and (max-width: ${mediaSize.screenSmall}) {
+    width: 482px;
+    height: 543px;
+    margin-left: auto;
+    margin-right: 0;
+  }
+
+  @media screen and (max-width: ${mediaSize.screenXSmall}) {
+    width: 100%;
+    height: 618px;
+    margin-top: 50px;
+  }
 `;
