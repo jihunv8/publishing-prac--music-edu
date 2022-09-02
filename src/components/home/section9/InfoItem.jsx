@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import * as mediaSize from '../../../global-style/style-util/mediaSize';
 
 function InfoItem({ title = '', content = '' }) {
   return (
@@ -15,6 +16,21 @@ const InfoItemWrapper = styled.div`
   padding: 45px 30px 15px;
   flex-grow: 1;
   flex-basis: 0;
+
+  @media screen and (max-width: ${mediaSize.screenLarge}) {
+    padding-top: 55px;
+    padding-bottom: 25px;
+  }
+
+  @media screen and (max-width: ${mediaSize.screenLarge}) {
+    padding-top: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  @media screen and (max-width: ${mediaSize.screenXSmall}) {
+    padding-left: 15px;
+  }
 `;
 
 const Title = styled.h3`
@@ -29,4 +45,12 @@ const Title = styled.h3`
 const Content = styled.p`
   margin-top: 20px;
   line-height: 160%;
+
+  @media screen and (max-width: ${mediaSize.screenLarge}) {
+    margin-top: 32px;
+  }
+
+  @media screen and (max-width: ${mediaSize.screenMiddle}) {
+    margin-top: 25px;
+  }
 `;

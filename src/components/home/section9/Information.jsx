@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import * as mediaSize from '../../../global-style/style-util/mediaSize';
 
 import InfoItem from './InfoItem';
 
@@ -19,4 +20,25 @@ const InformationWrapper = styled.div`
   width: 976px;
   margin: -119px 28px 0 auto;
   display: flex;
+
+  @media screen and (max-width: ${mediaSize.screenLarge}) {
+    width: 880px;
+    margin-top: -40px;
+    margin-right: 0;
+  }
+
+  @media screen and (max-width: ${mediaSize.screenMiddle}) {
+    width: 692px;
+  }
+
+  @media screen and (max-width: ${mediaSize.screenSmall}) {
+    width: 300px;
+    flex-direction: column;
+    margin-top: -192px;
+  }
+
+  @media screen and (max-width: ${mediaSize.screenXSmall}) {
+    margin-top: -40px;
+    margin-right: auto;
+  }
 `;

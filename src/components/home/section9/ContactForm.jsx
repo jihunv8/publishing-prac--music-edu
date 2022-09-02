@@ -1,4 +1,6 @@
 import styled from 'styled-components';
+import * as mediaSize from '../../../global-style/style-util/mediaSize';
+
 import Form from './Form';
 
 function ContactForm() {
@@ -20,6 +22,31 @@ const ContactFormWrapper = styled.div`
   margin-left: auto;
   margin-right: 0;
   padding: 30px 40px 30px 180px;
+
+  @media screen and (max-width: ${mediaSize.screenLarge}) {
+    padding-left: 235px;
+  }
+
+  @media screen and (max-width: ${mediaSize.screenMiddle}) {
+    width: 510px;
+    height: 620px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 35px;
+  }
+
+  @media screen and (max-width: ${mediaSize.screenSmall}) {
+    width: 473px;
+    height: 660px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 30px;
+  }
+
+  @media screen and (max-width: ${mediaSize.screenXSmall}) {
+    width: 100%;
+    height: 585px;
+  }
 `;
 
 const Title = styled.h2`
@@ -28,6 +55,14 @@ const Title = styled.h2`
   font-size: 3.75rem;
   line-height: 110%;
   text-align: center;
+
+  @media screen and (max-width: ${mediaSize.screenSmall}) {
+    font-size: 3rem;
+  }
+
+  @media screen and (max-width: ${mediaSize.screenXSmall}) {
+    font-size: 2.25rem;
+  }
 `;
 
 const ImageSource = styled.p`

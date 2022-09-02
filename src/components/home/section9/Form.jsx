@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components';
+import * as mediaSize from '../../../global-style/style-util/mediaSize';
 
 function Form() {
   return (
@@ -19,6 +20,10 @@ const FormWrapper = styled.form`
   display: flex;
   flex-direction: column;
   margin: 20px auto 0;
+
+  @media screen and (max-width: ${mediaSize.screenLarge}) {
+    width: 100%;
+  }
 `;
 
 const CommonInputStyle = css`
@@ -28,10 +33,6 @@ const CommonInputStyle = css`
   border: none;
   border-bottom: solid 2px #000;
   outline: none;
-
-  /* &::placeholder {
-    color: red;
-  } */
 `;
 
 const Input = styled.input`

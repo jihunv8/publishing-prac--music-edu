@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { contentsAreaXLarge } from '../../../global-style/style-util/mediaSize';
+import * as mediaSize from '../../../global-style/style-util/mediaSize';
 
 import image from '../../../images/wqe-min.jpg';
 import ContactForm from './ContactForm';
@@ -24,14 +24,57 @@ const Section9Wrapper = styled.section`
 `;
 
 const ContentsArea = styled.div`
-  width: ${contentsAreaXLarge};
+  width: ${mediaSize.contentsAreaXLarge};
   margin: 0 auto;
   padding: 80px 0;
+
+  @media screen and (max-width: ${mediaSize.screenLarge}) {
+    width: ${mediaSize.contentsAreaLarge};
+    padding-bottom: 44px;
+  }
+
+  @media screen and (max-width: ${mediaSize.screenMiddle}) {
+    width: ${mediaSize.contentsAreaMiddle};
+    padding-bottom: 60px;
+  }
+
+  @media screen and (max-width: ${mediaSize.screenSmall}) {
+    width: ${mediaSize.contentsAreaSmall};
+    flex-direction: column;
+  }
+
+  @media screen and (max-width: ${mediaSize.screenXSmall}) {
+    width: ${mediaSize.contentsAreaXSmall};
+  }
 `;
 
 const Image = styled.div`
   background: url(${image}) no-repeat center / cover;
   width: 570px;
   height: 698px;
-  margin-top: -481px;
+  margin-top: -482px;
+
+  @media screen and (max-width: ${mediaSize.screenLarge}) {
+    width: 443px;
+    height: 607px;
+    margin-top: -470px;
+  }
+
+  @media screen and (max-width: ${mediaSize.screenMiddle}) {
+    width: 431px;
+    height: 511px;
+    margin-top: -50px;
+  }
+
+  @media screen and (max-width: ${mediaSize.screenSmall}) {
+    width: 420px;
+    height: 497px;
+    margin-top: -58px;
+  }
+
+  @media screen and (max-width: ${mediaSize.screenXSmall}) {
+    width: 100%;
+    height: 403px;
+    margin-top: 40px;
+  }
 `;
