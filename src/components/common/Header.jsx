@@ -6,7 +6,7 @@ import menuIcon from '../../images/icons/menu.svg';
 
 function Header() {
   return (
-    <haeder>
+    <header>
       <HeaderContentsArea>
         <Logo>
           <a href="">
@@ -18,7 +18,7 @@ function Header() {
           <img src={menuIcon} />
         </TempButton>
       </HeaderContentsArea>
-    </haeder>
+    </header>
   );
 }
 
