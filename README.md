@@ -13,12 +13,12 @@ npm start
 
 ### 사용 스택
 
-![React](https://img.shields.io/badge/React-0088CC?style=flat-square&logo=React&logoColor=white)
-![Styled-Components](https://img.shields.io/badge/Styled--Components-DB7093?style=flat-square&logo=styled-components&logoColor=white)
+![React](https://img.shields.io/badge/React-0088CC?style=for-the-badge&logo=React&logoColor=white)
+![Styled-Components](https://img.shields.io/badge/Styled--Components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white)
 <br/>
-![JavaScript](https://img.shields.io/badge/JavaScript-d99a26?style=flat-square&logo=JavaScript&logoColor=white)
-![CSS](https://img.shields.io/badge/CSS-1572B6?style=flat-square&logo=CSS3&logoColor=white)
-![HTML](https://img.shields.io/badge/HTML-E34F26?style=flat-square&logo=HTML5&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-d99a26?style=for-the-badge&logo=JavaScript&logoColor=white)
+![CSS](https://img.shields.io/badge/CSS-1572B6?style=for-the-badge&logo=CSS3&logoColor=white)
+![HTML](https://img.shields.io/badge/HTML-E34F26?style=for-the-badge&logo=HTML5&logoColor=white)
 <br/>
 
 ### 기간
