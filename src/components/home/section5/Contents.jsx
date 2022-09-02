@@ -1,4 +1,6 @@
 import styled from 'styled-components';
+import * as mediaSize from '../../../global-style/style-util/mediaSize.js';
+
 import _ReadMoreButton from '../common-styled/ReadMoreButton.styled.js';
 
 function Contents() {
@@ -19,8 +21,23 @@ export default Contents;
 
 const ContentsWrapper = styled.div`
   background-color: #fff;
-  width: 584px;
-  padding: 30px 50px 56px;
+  height: 474px;
+  padding: 30px 50px;
+
+  @media screen and (max-width: ${mediaSize.screenLarge}) {
+    height: 458px;
+  }
+
+  @media screen and (max-width: ${mediaSize.screenMiddle}) {
+    height: auto;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  @media screen and (max-width: ${mediaSize.screenXSmall}) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 `;
 
 const Title = styled.h2`
@@ -30,6 +47,14 @@ const Title = styled.h2`
   font-weight: normal;
   font-family: oswald, sans-serif;
   line-height: 110%;
+
+  @media screen and (max-width: ${mediaSize.screenSmall}) {
+    font-size: 3rem;
+  }
+
+  @media screen and (max-width: ${mediaSize.screenXSmall}) {
+    font-size: 2.25rem;
+  }
 `;
 
 const Text = styled.div`
