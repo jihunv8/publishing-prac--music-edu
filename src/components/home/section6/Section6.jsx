@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { contentsAreaXLarge } from '../../../global-style/style-util/mediaSize';
+import * as mediaSize from '../../../global-style/style-util/mediaSize';
 import LeftContents from './LeftContents';
 import RightContent from './RightContent';
 
@@ -19,8 +19,25 @@ export default Section6;
 const Section6Wrapper = styled.section``;
 
 const ContentsArea = styled.div`
-  width: ${contentsAreaXLarge};
+  width: ${mediaSize.contentsAreaXLarge};
   margin: 0 auto;
   padding: 60px 0;
   display: flex;
+
+  @media screen and (max-width: ${mediaSize.screenLarge}) {
+    width: ${mediaSize.contentsAreaLarge};
+  }
+
+  @media screen and (max-width: ${mediaSize.screenMiddle}) {
+    width: ${mediaSize.contentsAreaMiddle};
+  }
+
+  @media screen and (max-width: ${mediaSize.screenSmall}) {
+    width: ${mediaSize.contentsAreaSmall};
+    flex-direction: column;
+  }
+
+  @media screen and (max-width: ${mediaSize.screenXSmall}) {
+    width: ${mediaSize.contentsAreaXSmall};
+  }
 `;

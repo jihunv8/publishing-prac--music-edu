@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import * as mediaSize from '../../../global-style/style-util/mediaSize';
 
 import image from '../../../images/-min2.jpg';
 import Content from './Content';
@@ -25,6 +26,11 @@ const LeftContentsWrapper = styled.div`
   flex-basis: 0;
   display: flex;
   flex-direction: column;
+
+  @media screen and (max-width: ${mediaSize.screenSmall}) {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
 `;
 
 const Image = styled.div`

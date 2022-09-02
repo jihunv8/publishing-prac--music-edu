@@ -7,8 +7,9 @@ function ContentText({ children }) {
 export default ContentText;
 
 const ContentTextWrapper = styled.div`
-  color: #111111;
   margin-top: 20px;
-  line-height: 160%;
+  color: #111111;
   font-family: Montserrat, sans-serif;
+  line-height: 160%;
+  text-align: justify;
 `;
