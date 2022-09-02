@@ -1,9 +1,15 @@
 # 퍼블리싱 연습
-
+리엑트 퍼블리싱 연습
 [Nicepage](https://nicepage.com/) 무료 웹 디자인 시안으로 연습 <br/>
 시안 ID : 1248827
 <br/>
 
+### 시작
+```
+npm i
+npm start
+```
+<br/>
 
 ### 사용 스택
 
@@ -19,5 +25,7 @@
 <br/>
 
 ### 결과물
+![GIF 2022-09-02 오후 4-17-30](https://user-images.githubusercontent.com/78804014/188081607-e86e662e-408b-4c7e-a929-9055e34ed675.gif)
 
 #### 반응형
+![GIF 2022-09-02 오후 4-28-24](https://user-images.githubusercontent.com/78804014/188082697-26036881-821c-45ea-97e4-e145d8849da2.gif)
