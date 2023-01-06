@@ -1,8 +1,7 @@
-# 퍼블리싱 연습
-리엑트 퍼블리싱 연습 <br/>
-[Nicepage](https://nicepage.com/) 무료 웹 디자인 시안으로 연습 <br/>
-시안 ID : [1248827](https://nicepage.com/html-templates?term=1248827)
-<br/>
+# Music Education
+[Nicepage](https://nicepage.com/) 무료 웹 디자인 시안을 퍼블리싱한 페이지 입니다. <br/>
+React와 Styled-Components를 사용하여 웹페이지 구현속도를 측정하기 위한 목적으로 진행하였습니다. <br/>
+시안 ID : [1248827](https://nicepage.com/html-templates?term=1248827) <br/>
 
 ### 시작
 ```
