@@ -3,22 +3,20 @@
 React와 Styled-Components를 사용하여 웹페이지 구현속도를 측정하기 위한 목적으로 진행하였습니다. <br/>
 시안 ID : [1248827](https://nicepage.com/html-templates?term=1248827) <br/>
 
-### 시작
-```
-npm i
-npm start
-```
+## 배포 URL
+https://music-edu-publ.netlify.app
+
 <br/>
 
-### 사용 스택
+## 사용 스택
 `React` `Styled-Components` <br/>
 `javaScript` `CSS` `HTML`
 
-### 기간
+## 기간
 * 22.08.29(월) ~ 22.09.02(금) 총 5일
 <br/>
 
-### 결과물
+## 결과물
 ### Full Page
 
 <details>
